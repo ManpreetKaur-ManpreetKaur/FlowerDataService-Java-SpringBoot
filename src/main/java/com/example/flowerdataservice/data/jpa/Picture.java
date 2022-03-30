@@ -3,7 +3,7 @@ package com.example.flowerdataservice.data.jpa;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "pictures")
+@Table(name = "picture")
 public class Picture {
 
     @Id
@@ -13,12 +13,14 @@ public class Picture {
     private String small = "";
     private String large = "";
 
-    public Picture() {
-    }
+
 
     public Picture(String small, String large) {
         this.small = small;
         this.large = large;
+    }
+
+    public Picture() {
     }
 
     public Integer getId() {

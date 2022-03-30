@@ -1,6 +1,5 @@
 package com.example.flowerdataservice.data.jpa;
 
-import net.minidev.json.annotate.JsonIgnore;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;

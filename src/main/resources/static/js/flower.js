@@ -2,10 +2,13 @@
 
 "use strict"; // use the strict mode
 
-// starts using jQuery
-$(function () {
+let link = localStorage["flower-data-link"];
 
-    let flower = JSON.parse(localStorage["flower"]);
+$(function(){
+    $.getJSON(link, displayFlowerData);
+})
+
+function displayFlowerData(flower){
     $("span.flower_name").text(flower.label);
     $("span.flower_price").text(flower.price);
     $("img.flower_image")
@@ -13,4 +16,4 @@ $(function () {
         .attr("alt", flower.label);
     $("p.flower_info").text(flower.text);
     $("a:contains(Wikipedia)").attr("href", flower.wiki);
-});
+}

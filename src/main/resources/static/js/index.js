@@ -11,11 +11,12 @@ $(function () {
 function displayFlowers(data) {
     let $table = $("<table></table>");
     let flowers = data["_embedded"].flowers;
-    flowers.forEach((flower, index) => {
+    flowers.forEach( flower => {
+        let link = flower["_links"].self.href;
             $table.append(
                 `<tr> 
                 <td>
-                    <a href="flower.html" data-index="${index}">
+                    <a href="flower.html" data-link="${link}">
                      <img src="images/flowers/${flower.pictures.small}" 
                         alt="${flower.id}" class="thumb">
                     </a> 
@@ -32,7 +33,6 @@ function displayFlowers(data) {
     $table.appendTo("main");
 
     $("table a").click(function () {
-        let index = $(this).data("index");
-        localStorage["flower"] = JSON.stringify(flowers[index]);
+        localStorage["flower-data-link"] = $(this).data("link");
     });
 }
