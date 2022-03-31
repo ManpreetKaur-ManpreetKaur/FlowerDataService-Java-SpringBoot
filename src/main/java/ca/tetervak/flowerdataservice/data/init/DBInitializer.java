@@ -1,8 +1,8 @@
-package com.example.flowerdataservice.data.init;
+package ca.tetervak.flowerdataservice.data.init;
 
-import com.example.flowerdataservice.data.jpa.Flower;
-import com.example.flowerdataservice.data.jpa.FlowerDataRepository;
-import com.example.flowerdataservice.data.jpa.Picture;
+import ca.tetervak.flowerdataservice.data.jpa.Flower;
+import ca.tetervak.flowerdataservice.data.jpa.FlowerDataRepository;
+import ca.tetervak.flowerdataservice.data.jpa.Picture;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

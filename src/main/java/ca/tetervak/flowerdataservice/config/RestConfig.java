@@ -1,6 +1,6 @@
-package com.example.flowerdataservice.config;
+package ca.tetervak.flowerdataservice.config;
 
-import com.example.flowerdataservice.data.jpa.Flower;
+import ca.tetervak.flowerdataservice.data.jpa.Flower;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 import org.springframework.stereotype.Component;

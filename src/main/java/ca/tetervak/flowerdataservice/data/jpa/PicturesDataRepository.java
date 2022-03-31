@@ -1,4 +1,4 @@
-package com.example.flowerdataservice.data.jpa;
+package ca.tetervak.flowerdataservice.data.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
