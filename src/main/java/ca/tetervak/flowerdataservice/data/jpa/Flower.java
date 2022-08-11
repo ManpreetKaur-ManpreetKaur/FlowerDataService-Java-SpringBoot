@@ -18,7 +18,6 @@ public class Flower {
 
     @RestResource(exported = false)
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "picture_id", referencedColumnName = "id")
     private Picture pictures = null;
 
     private String wiki = "";

@@ -3,11 +3,11 @@ package ca.tetervak.flowerdataservice.data.init;
 import ca.tetervak.flowerdataservice.data.jpa.Flower;
 import ca.tetervak.flowerdataservice.data.jpa.FlowerDataRepository;
 import ca.tetervak.flowerdataservice.data.jpa.Picture;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-@Service
+@Component
 public class DBInitializer {
 
     private final FlowerDataRepository flowerDataRepository;
@@ -68,7 +68,5 @@ public class DBInitializer {
                 "https://en.wikipedia.org/wiki/Orchidaceae"
         );
         flowerDataRepository.save(orchid);
-
-        flowerDataRepository.flush();
     }
 }
