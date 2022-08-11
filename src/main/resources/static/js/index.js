@@ -17,7 +17,7 @@ function displayFlowers(data) {
                 `<tr> 
                 <td>
                     <a href="flower.html" data-link="${link}">
-                     <img src="images/flowers/${flower.pictures.small}" 
+                     <img src="images/flowers/${flower.picture.small}" 
                         alt="${flower.id}" class="thumb">
                     </a> 
                 </td> 
