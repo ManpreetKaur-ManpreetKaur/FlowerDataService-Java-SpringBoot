@@ -23,8 +23,8 @@ function displayFlowers(data) {
                 </td> 
                 <td>
                     <span class="flower_label">${flower.label}</span>&nbsp;&nbsp;
-                    <span class="flower_price">${flower.price}</span><br>
-                    ${flower.text}
+                    <span class="flower_price">&dollar;${flower.price}</span><br>
+                    ${flower.description}
                 </td>
             </tr>`
             );

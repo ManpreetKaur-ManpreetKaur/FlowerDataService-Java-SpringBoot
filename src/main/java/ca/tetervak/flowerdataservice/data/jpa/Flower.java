@@ -3,6 +3,7 @@ package ca.tetervak.flowerdataservice.data.jpa;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "flower")
@@ -12,8 +13,8 @@ public class Flower {
     private String id = "";
 
     private String label = "";
-    private String price = "";
-    private String text = "";
+    private BigDecimal price = BigDecimal.valueOf(0.0);
+    private String description = "";
 
     @RestResource(exported = false)
     @OneToOne(cascade = CascadeType.ALL)
@@ -28,15 +29,15 @@ public class Flower {
     public Flower(
             String id,
             String label,
-            String price,
-            String text,
+            double price,
+            String description,
             Picture pictures,
             String wiki
     ) {
         this.id = id;
         this.label = label;
-        this.price = price;
-        this.text = text;
+        this.price = BigDecimal.valueOf(price);
+        this.description = description;
         this.pictures = pictures;
         this.wiki = wiki;
     }
@@ -57,20 +58,20 @@ public class Flower {
         this.label = label;
     }
 
-    public String getPrice() {
-        return price;
+    public double getPrice() {
+        return price.doubleValue();
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setPrice(Double price) {
+        this.price = BigDecimal.valueOf(price);
     }
 
-    public String getText() {
-        return text;
+    public String getDescription() {
+        return description;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setDescription(String text) {
+        this.description = text;
     }
 
     public Picture getPictures() {

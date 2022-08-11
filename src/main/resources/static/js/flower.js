@@ -10,10 +10,10 @@ $(function(){
 
 function displayFlowerData(flower){
     $("span.flower_name").text(flower.label);
-    $("span.flower_price").text(flower.price);
+    $("span.flower_price").html(`&dollar;${flower.price}`);
     $("img.flower_image")
         .attr("src", `images/flowers/${flower.pictures.large}`)
         .attr("alt", flower.label);
-    $("p.flower_info").text(flower.text);
+    $("p.flower_info").text(flower.description);
     $("a:contains(Wikipedia)").attr("href", flower.wiki);
 }
