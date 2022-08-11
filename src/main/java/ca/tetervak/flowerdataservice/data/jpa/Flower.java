@@ -18,7 +18,7 @@ public class Flower {
 
     @RestResource(exported = false)
     @OneToOne(cascade = CascadeType.ALL)
-    private Picture pictures = null;
+    private Picture picture = null;
 
     private String wiki = "";
 
@@ -30,14 +30,14 @@ public class Flower {
             String label,
             double price,
             String description,
-            Picture pictures,
+            Picture picture,
             String wiki
     ) {
         this.id = id;
         this.label = label;
         this.price = BigDecimal.valueOf(price);
         this.description = description;
-        this.pictures = pictures;
+        this.picture = picture;
         this.wiki = wiki;
     }
 
@@ -73,12 +73,12 @@ public class Flower {
         this.description = text;
     }
 
-    public Picture getPictures() {
-        return pictures;
+    public Picture getPicture() {
+        return picture;
     }
 
-    public void setPictures(Picture pictures) {
-        this.pictures = pictures;
+    public void setPicture(Picture pictures) {
+        this.picture = pictures;
     }
 
     public String getWiki() {
