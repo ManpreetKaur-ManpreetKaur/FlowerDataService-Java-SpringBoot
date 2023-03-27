@@ -5,7 +5,7 @@ import ca.tetervak.flowerdataservice.data.jpa.FlowerDataRepository;
 import ca.tetervak.flowerdataservice.data.jpa.Picture;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 @Component
 public class DBInitializer {

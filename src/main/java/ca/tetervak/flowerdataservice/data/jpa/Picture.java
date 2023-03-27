@@ -1,6 +1,6 @@
 package ca.tetervak.flowerdataservice.data.jpa;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "picture")

@@ -2,7 +2,7 @@ package ca.tetervak.flowerdataservice.data.jpa;
 
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
